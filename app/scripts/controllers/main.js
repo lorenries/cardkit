@@ -96,10 +96,10 @@ angular.module('cardkitApp')
             name: 'Logo',
             type: 'image',
             width: 100,
-            // height: function() {
-            //   return this.width/4;
-            // },
-            height: 100,
+             height: function() {
+               return this.width;
+             },
+//            height: 100,
             opacity: 1,
             src: function() {
               return $scope.theme.logoSrc;
@@ -143,9 +143,9 @@ angular.module('cardkitApp')
             lineHeight: function() {
               return this.fontSize*1.2;
             },
-            textAnchor: 'middle',
-            x: '50%',
-            y: 75,
+            textAnchor: 'start',
+            x: '3%',
+            y: 60,
             draggable: true,
             showHoverArea: true,
             editable: {
@@ -163,7 +163,7 @@ angular.module('cardkitApp')
           subtext: {
             name: 'Subtext',
             type: 'text',
-            text: 'Created by The Times of London\nAvailable on GitHub at github.com/times/cardkit',
+            text: 'THIS IS WHERE THE CREDIT GOES',
             fill: function() {
               return $scope.theme.quote;
             },
@@ -173,7 +173,8 @@ angular.module('cardkitApp')
             fontFamily: function() {
               return $scope.theme.headlineFont;
             },
-            textAnchor: 'middle',
+            textTransform: 'uppercase',
+            textAnchor: 'start',
             x: '50%',
             yAttach: {
               element: 'headline'

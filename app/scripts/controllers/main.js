@@ -25,11 +25,11 @@ angular.module('cardkitApp')
           height: 320
 //          gridsize: 16.25
         },
-        // {
-        //   name: 'Video',
-        //   width: 640,
-        //   height: 360,
-        // },
+         {
+           name: 'Video',
+           width: 640,
+           height: 360,
+         },
       ],
       themes: themeConfig,
       output: {
@@ -163,7 +163,7 @@ angular.module('cardkitApp')
           subtext: {
             name: 'Subtext',
             type: 'text',
-            text: 'THIS IS WHERE THE CREDIT GOES',
+            text: 'This is where the credit would go',
             fill: function() {
               return $scope.theme.quote;
             },
@@ -171,7 +171,7 @@ angular.module('cardkitApp')
             lineHeight: 22,
             fontWeight: 300,
             fontFamily: function() {
-              return $scope.theme.headlineFont;
+              return $scope.theme.creditFont;
             },
             textTransform: 'uppercase',
             textAnchor: 'start',
